@@ -1,8 +1,13 @@
 import React from "react";
-import { Button } from "react-bootstrap";
+import { Button, Modal } from "react-bootstrap";
 import MovieReview from "./MovieReview";
 
 const Result = ({ result }) => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <>
     <Modal show={show} onHide={handleClose}>
