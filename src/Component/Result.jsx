@@ -1,9 +1,22 @@
 import React from "react";
 import { Button } from "react-bootstrap";
+import MovieReview from "./MovieReview";
 
 const Result = ({ result }) => {
   return (
     <>
+    <Modal show={show} onHide={handleClose}>
+        <Modal.Title>Movie Review</Modal.Title>
+
+        <Modal.Body>
+          <MovieReview item={result} />
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
       <div
         style={{
           backgroundColor: "#b3d7ff",
