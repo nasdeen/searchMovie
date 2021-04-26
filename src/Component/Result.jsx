@@ -35,7 +35,7 @@ const Result = ({ result }) => {
               </p>
               <h3>{item.headline}</h3>
               <h4>{item.display_title}</h4>
-              <Button className="btn btn-primary">Movie Review </Button>
+              <Button className="btn btn-primary" onClick={handleShow}>Movie Review </Button>
             </div>
           );
         })}
